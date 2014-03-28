@@ -357,7 +357,7 @@
                     var options = $('option[value!="' + this.options.selectAllValue + '"]', $parent);
                     for (var i = 0; i < options.length; i++) {
                         // Additionally check whether the option is visible within the dropdown.
-                        if (options[i].value !== this.options.selectAllValue && this.getInputByValue(options[i].value).is(':visible')) {
+                        if (options[i].value !== this.options.selectAllValue && this.getInputByValue(options[i].value) && this.getInputByValue(options[i].value).is(':visible')) {
                             values.push(options[i].value);
                         }
                     }
